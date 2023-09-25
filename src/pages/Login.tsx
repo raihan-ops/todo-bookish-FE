@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../components/ui/Button";
@@ -13,7 +14,6 @@ type FormData = {
 const Login = () => {
     const {
         register,
-        setValue,
         handleSubmit,
         formState: { errors },
     } = useForm<FormData>();

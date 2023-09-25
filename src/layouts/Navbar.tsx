@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
 
                         <ul className="flex space-x-4 pl-[12px] items-center">
                             <li>
-                                <Link to="#" className="text-nav-text-color text-[16px] font-bold font-DM hover:underline">
+                                <Link to="/" className="text-nav-text-color text-[16px] font-bold font-DM hover:underline">
                                     Home
                                 </Link>
                             </li>

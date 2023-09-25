@@ -1,10 +1,15 @@
 import React from 'react';
 import Footer from '../layouts/Footer';
+import Book from '../components/Book';
 
 const Home = () => {
     return (
         <div>
-            <p>This is home page</p>
+            <div className='container'>
+                <p>Top Recent 10 Books</p>
+                <Book />
+                <Book />
+            </div>
             <Footer />
         </div>
     );
