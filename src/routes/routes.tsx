@@ -3,6 +3,8 @@ import App from '../App';
 import Login from '../pages/Login';
 import SignUp from '../pages/SignUp';
 import Home from '../pages/Home';
+import BookDetails from '../pages/BookDetails';
+import DiscoverBooks from '../pages/DiscoverBooks';
 
 
 const routes = createBrowserRouter([
@@ -14,14 +16,14 @@ const routes = createBrowserRouter([
         index: true,
         element: <Home />,
       },
-      // {
-      //   path: '/products',
-      //   element: <Products />,
-      // },
-      // {
-      //   path: '/product-details/:id',
-      //   element: <ProductDetails />,
-      // },
+      {
+        path: '/books',
+        element: <DiscoverBooks />,
+      },
+      {
+        path: '/book-details/:id',
+        element: <BookDetails />,
+      },
       // {
       //   path: '/checkout',
       //   element: (
