@@ -9,3 +9,11 @@ export interface IBook {
     __v: number;
     _id: string;
 }
+
+export interface IComment {
+  bookId: string;
+  comment: string;
+  createdAt: string;
+  name: string;
+  updatedAt: string;
+}
