@@ -3,13 +3,14 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import Button from "../components/ui/Button";
 import Label from "../components/ui/Label";
-import {Input} from "../components/ui/Input";
+import { Input } from "../components/ui/Input";
 import { Link } from "react-router-dom";
 
 type FormData = {
-    fullname: string;
-    email: string;
+    firstName: string;
+    lastName: string;
     password: string;
+    email: string;
 };
 
 const SignUp = () => {
@@ -42,27 +43,38 @@ const SignUp = () => {
                         </div>
                         <form onSubmit={onSubmit}>
                             <div className="flex flex-col gap-1 mt-[54px]">
-                                <Label>Full name</Label>
+                                <Label>First name</Label>
                                 <Input
                                     type="text"
-                                    placeholder="Enter your name"
-                                    {...register("fullname")}
+                                    placeholder="Enter your first name"
+                                    {...register("firstName")}
                                 />
                             </div>
                             <div className="flex flex-col gap-1 mt-[30px]">
-                                <Label>Email</Label>
+                                <Label>Last name</Label>
                                 <Input
-                                    type="email"
-                                    placeholder="Type your e-mail"
-                                    {...register("email")}
+                                    type="text"
+                                    placeholder="Enter your last name"
+                                    {...register("lastName")}
                                 />
                             </div>
+
                             <div className="flex flex-col gap-1 mt-[30px]">
                                 <Label>Password</Label>
                                 <Input
                                     type="password"
                                     placeholder="Type your password"
                                     {...register("password")}
+                                />
+                            </div>
+
+
+                            <div className="flex flex-col gap-1 mt-[30px]">
+                                <Label>Email</Label>
+                                <Input
+                                    type="email"
+                                    placeholder="Type your e-mail"
+                                    {...register("email")}
                                 />
                             </div>
 

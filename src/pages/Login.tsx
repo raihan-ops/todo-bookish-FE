@@ -3,8 +3,9 @@ import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import Button from "../components/ui/Button";
 import Label from "../components/ui/Label";
-import {Input} from "../components/ui/Input";
+import { Input } from "../components/ui/Input";
 import { Link } from "react-router-dom";
+import { usePostLoginUserMutation } from "../redux/features/user/userApi";
 
 type FormData = {
     email: string;
@@ -18,7 +19,11 @@ const Login = () => {
         formState: { errors },
     } = useForm<FormData>();
 
-    const onSubmit = handleSubmit((data) => console.log(data));
+
+    const [postLoginReq, res] = usePostLoginUserMutation()
+
+
+    const onSubmit = handleSubmit((data) => postLoginReq({data}));
 
     // useEffect(() => {
     //     // Set initial values for your form fields using setValue
