@@ -15,7 +15,7 @@ const Comment = ({ value }: IProps) => {
             <div>
                 <p className='text-[14px] font-semibold'>{name}</p>
                 <p className='text-[14px] text-GrayBg'>{desc}</p>
-                <p className='text-[12px] text-nav-text-color'>about {moment(createdAt).startOf('hour').fromNow()}</p>
+                <p className='text-[12px] text-nav-text-color'>about {moment(createdAt).startOf('seconds').fromNow()}</p>
             </div>
         </div>
     );

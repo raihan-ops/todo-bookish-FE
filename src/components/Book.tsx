@@ -8,7 +8,7 @@ interface IProps {
 
 const Book = ({ book }: IProps) => {
 
-    const { author, genre, publication_date, title, _id :id } = book
+    const { author, genre, publication_date, title, _id: id } = book
     return (
         <div className="h-[400px] bg-gray-100 w-[300px]">
             <div className="bg-white rounded-xl overflow-hidden shadow-xl hover:scale-105 hover:shadow-2xl transform duration-500 cursor-pointer">
@@ -20,9 +20,11 @@ const Book = ({ book }: IProps) => {
                 </div>
                 <div className="relative">
                     <img className="w-full h-[200px]" src="https://images.unsplash.com/photo-1571167530149-c1105da4c2c7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=376&q=80" />
-                    <p className="absolute text-[14px] transform translate-x-20 -translate-y-20 bg-black1 text-white py-3 px-6 rounded-full cursor-pointer hover:scale-105 duration-500 font-semibold">
-                        <Link to={`/book-details/${id}`}>Discover more</Link>
-                    </p>
+                    <Link to={`/book-details/${id}`}>
+                        <p className="absolute text-[14px] transform translate-x-20 -translate-y-20 bg-black1 text-white py-3 px-6 rounded-full cursor-pointer hover:scale-105 duration-500 font-semibold">
+                            Discover more
+                        </p>
+                    </Link>
                 </div>
             </div>
         </div>
